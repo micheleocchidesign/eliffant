@@ -174,4 +174,18 @@ import Logo from './LogoElefante.astro';
       }
     });
   });
+  const brandLink = document.querySelector('.brand-link');
+
+  brandLink?.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    // Rimuoviamo il behavior: 'smooth' qui, perché lo gestisce già il tuo global.css
+    // Puntiamo a 0 (l'inizio della pagina)
+    window.scrollTo(0, 0); 
+    
+    // Chiudi il menu mobile se aperto
+    menuToggle?.classList.remove('is-active');
+    navLinks?.classList.remove('is-active');
+    document.body.style.overflow = '';
+  });
 </script>
