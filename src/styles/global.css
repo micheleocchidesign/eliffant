@@ -2,10 +2,13 @@
 
 :root {
   /* Palette Colori - "Analog Mood" */
-  --color-bg: #1c1917;      /* Fumo e carbone */
-  --color-paper: #f5f2ed;   /* Carta fatta a mano, pulita */
-  --color-accent: #d97706;  /* La fiamma del dolce fuoco */
-  --color-stone: #78716c;   /* La pietra dei giardini zen e delle montagne */
+  --color-bg: #1c1917;      
+  --color-paper: #f5f2ed;   
+  --color-accent: #ec732b;  
+  --color-stone: #78716c;
+  --color-pink: #c62f9a;
+  --color-blue: #57aaa4;
+  --color-yellow: #efc067;   
   
   /* Tipografia */
   --font-special: 'Special Elite', system-ui, serif;
