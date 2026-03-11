@@ -8,7 +8,8 @@ import tabla from '../assets/images/polaroid-tabla.jpg';
 import chitarra from '../assets/images/polaroid-chitarra.jpg';
 import erryKenzo from '../assets/images/polaroid-erry-kenzo.jpg';
 import vinili from '../assets/images/polaroid-vinili.jpg';
-import fotoServizi from '../assets/images/mood-servizi.jpg'
+import fotoServizi from '../assets/images/mood-servizi.jpg';
+import fotoStudio from '../assets/images/erry-studio.jpg'
 ---
 
 <BaseLayout title="ELIFFANT | Etichetta discografica">
@@ -80,25 +81,49 @@ import fotoServizi from '../assets/images/mood-servizi.jpg'
 				<span class="service-num">01</span>
 				<div class="service-text">
 				<h3>Lo Studio</h3>
-				<p>Uno spazio accogliente nella Svizzera Italiana dove il calore delle valvole incontra la precisione digitale. Produciamo musica, non file.</p>
+				<p>Uno spazio accogliente a due passi da Locarno dove il calore delle valvole incontra la precisione digitale. Produciamo musica, non file.</p>
 				</div>
 			</li>
 			<li class="service-item">
 				<span class="service-num">02</span>
 				<div class="service-text">
 				<h3>L'Etichetta</h3>
-				<p>Curiamo il percorso del disco, trasformiamo le vibes in realtà.</p>
+				<p>Curiamo tutto il percorso del disco, dall'idea al prodotto finito.</p>
 				</div>
 			</li>
 			<li class="service-item">
 				<span class="service-num">03</span>
 				<div class="service-text">
 				<h3>Il Sociale</h3>
-				<p>Supportiamo la scena locale e creiamo connessioni umane che vanno oltre.</p>
+				<p>Supportiamo la scena locale e creiamo connessioni umane che vanno oltre la musica.</p>
 				</div>
 			</li>
 			</ul>
 		</div>
+		</section>
+		<section id="location" class="location-section">
+			<div class="container">
+				<div class="location-content">
+				<span class="label">// DOVE SIAMO</span>
+				<h2>Radici in Ticino.</h2>
+				<p class="location-address">
+					Via Monte Ceneri 20<br />
+					6516 Cugnasco, Svizzera
+				</p>
+				</div>
+			</div>
+
+			<div class="map-wide">
+				<iframe 
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44206.324866620096!2d8.877796773368647!3d46.172739785766055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4785b56125c188eb%3A0xc643b1311dbb283e!2sVia%20Monte%20Ceneri%2020%2C%206516%20Cugnasco%2C%20Svizzera!5e0!3m2!1sit!2sit!4v1773182208567!5m2!1sit!2sit" 
+				width="100%" 
+				height="100%" 
+				style="border:0;" 
+				allowfullscreen="" 
+				loading="lazy" 
+				referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+			</div>
 		</section>
   </main>
 </BaseLayout>
@@ -204,7 +229,7 @@ import fotoServizi from '../assets/images/mood-servizi.jpg'
     height: auto;
     /* Sborda in alto e a destra */
     transform: translateY(-10%) scale(1.1); 
-    filter: drop-shadow(0px 20px 50px rgba(0,0,0,0.2));
+    filter: drop-shadow(0px 0px 50px rgba(0,0,0,0.5));
   }
 
   /* --- SEZIONE ABOUT --- */
@@ -285,7 +310,7 @@ import fotoServizi from '../assets/images/mood-servizi.jpg'
     box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
     width: 300px;
     background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png');
-    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+	border-radius: 2px;
   }
 
   /* Posizioni asimmetriche a sinistra */
@@ -390,6 +415,46 @@ import fotoServizi from '../assets/images/mood-servizi.jpg'
     max-width: 600px;
     opacity: 1;
   }
+  
+  .location-section {
+    padding-top: var(--space-xl);
+    background-color: var(--color-paper);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .location-content {
+    max-width: 800px;
+    margin: 0 auto var(--space-s) auto;
+    text-align: center;
+  }
+
+  .location-content h2 {
+    font-family: var(--font-special);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 0.9;
+    margin: var(--space-m) 0;
+	color: var(--color-bg);
+  }
+
+  .location-address {
+    font-family: var(--font-main);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-bg);
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+  }
+
+  /* --- MAPPA PANORAMICA --- */
+  .map-wide {
+    width: 100%;
+    height: 300px; /* Bassa e molto larga */
+    border-top: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
 
   /* --- MOBILE --- */
   @media (max-width: 900px) {
@@ -459,7 +524,16 @@ import fotoServizi from '../assets/images/mood-servizi.jpg'
 	.services-section { padding: var(--space-l) var(--space-m); }
     .service-item { flex-direction: column; gap: var(--space-s); }
     .services-bg :global(img) { filter: brightness(0.3); }
+
+	.location-address {
+      font-size: 1.3rem;
+    }
+    .map-wide {
+      height: 250px;
+    }
 }
+
+
 </style>
 
 <script>
@@ -533,8 +607,9 @@ import fotoServizi from '../assets/images/mood-servizi.jpg'
 	});
 
 	gsap.to(".p4", {
-		x: +100,
-		rotate: "+=6",
+		x: +20,
+		y: +30,
+		rotate: "+=20",
 		ease: "none",
 		scrollTrigger: {
 			trigger: ".about-section",

@@ -3,12 +3,14 @@ import Logo from './LogoElefante.astro';
 ---
 
 <nav id="navbar" class="main-nav">
-  <div class="brand">
-    <div class="logo-wrapper">
-      <Logo />
+  <a href="/" class="brand-link" aria-label="Torna in Home">
+    <div class="brand">
+      <div class="logo-wrapper">
+        <Logo />
+      </div>
+      <span class="brand-name">eliffant</span>
     </div>
-    <span class="brand-name">eliffant</span>
-  </div>
+  </a>
 
   <button id="menu-toggle" class="hamburger" aria-label="Apri menu">
     <span></span>
@@ -19,8 +21,9 @@ import Logo from './LogoElefante.astro';
   <ul id="nav-links" class="nav-links">
     <li><a href="#manifesto" class="nav-item">About</a></li>
     <li><a href="#services" class="nav-item">Servizi</a></li>
-    <li><a href="#releases" class="nav-item">Releases</a></li>
-    <li><a href="#contact" class="nav-item">Contact</a></li>
+    <li><a href="#releases" class="nav-item">Produzioni</a></li>
+    <li><a href="#location" class="nav-item">Dove siamo</a></li>
+    <li><a href="#contact" class="nav-item">Contatti</a></li>
   </ul>
 </nav>
 
@@ -43,9 +46,20 @@ import Logo from './LogoElefante.astro';
   }
 
   /* ... i tuoi stili .brand, .logo-wrapper, .brand-name rimangono uguali ... */
+  .brand-link {
+    text-decoration: none;
+    transition: color 0.1s ease;
+    color: var(--color-paper); /* Colore iniziale */
+  }
+
+  /* Effetto Rollover */
+  .brand-link:hover {
+    color: var(--color-accent);
+  }
   .brand { display: flex; align-items: center; gap: 12px; }
-  .logo-wrapper { width: 32px; height: 32px; color: var(--color-paper); }
-  .brand-name { font-family: var(--font-main); font-size: 1.2rem; font-weight: bold; color: var(--color-paper); }
+  .logo-wrapper { height: 32px; width: auto; height: 32px; aspect-ratio: 642 / 478.67; color: inherit; color: inherit; }
+  .brand-name { font-family: var(--font-main); font-size: 1.5rem; font-weight: bold; color: var(--color-paper); }
+
 
   .nav-links {
     display: flex;
@@ -146,7 +160,7 @@ import Logo from './LogoElefante.astro';
         document.body.style.overflow = '';
 
         if (target) {
-          const offset = 80; // Altezza della navbar
+          const offset = 65; // Altezza della navbar
           const bodyRect = document.body.getBoundingClientRect().top;
           const elementRect = target.getBoundingClientRect().top;
           const elementPosition = elementRect - bodyRect;
