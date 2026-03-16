@@ -23,7 +23,7 @@ import giradischi from '../assets/images/giradischi.png'
     <section class="hero">
 		<div class="hero-wrapper">
 			<div class="hero-text">
-			<h1>eliffant production</h1>
+			<h1>eliffant<br/> production</h1>
 			<p class="description">
 				Hai un'idea da trasformare in musica?<br />
 				Scrivici, c'è da divertirsi.
@@ -175,7 +175,7 @@ import giradischi from '../assets/images/giradischi.png'
 
   .hero h1 {
     font-family: var(--font-special);
-    font-size: clamp(3.5rem, 8vw, 6.5rem);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
     line-height: 0.85;
     margin-bottom: var(--space-s);
     letter-spacing: -4px;
@@ -187,7 +187,7 @@ import giradischi from '../assets/images/giradischi.png'
     font-family: var(--font-main);
     font-size: 1.2rem;
     font-weight: 700;
-    max-width: 400px;
+    max-width: 600px;
   }
 
   .scroll-invite {
@@ -232,8 +232,8 @@ import giradischi from '../assets/images/giradischi.png'
 
   .vinyl-container {
     position: absolute;
-    right: -15%;
-    top: 10%;
+    right: -17%;
+    top: 40%;
     transform: translateY(-50%);
     width: 80vw;
     z-index: 1;
@@ -493,7 +493,7 @@ import giradischi from '../assets/images/giradischi.png'
   /* --- MOBILE --- */
   @media (max-width: 900px) {
     .hero {
-      padding-top: var(--space-xl);
+      padding-top: var(--space-m);
       flex-direction: column;
       justify-content: flex-start;
       overflow: visible;
@@ -511,15 +511,15 @@ import giradischi from '../assets/images/giradischi.png'
       top: auto;
       transform: none;
       width: 110vw;
-	    margin-top: -15vh;
+	    
       margin-bottom: var(--space-l);
-      order: 1; /* Vinile PRIMA */
+      order: 2;
     }
 
     .hero-text {
-      order: 2; /* Testo DOPO */
+      order: 1; /* Testo DOPO */
       width: 100%;
-      margin-top:3rem;
+      margin-top:1rem;
     }
 
     .hero h1 {
@@ -551,10 +551,10 @@ import giradischi from '../assets/images/giradischi.png'
       width: 100%;
     }
     .polaroid { width: 260px; }
-    .p1 { left: 0%; top: -10%; transform: rotate(-16deg); }
-    .p2 { left: 40%; top: -7%; transform: rotate(7deg);}
-    .p3 { left: 3%; top: 30%; transform: rotate(14deg); }
-    .p4 { left: 35%; top: 35%; transform: rotate(-10deg); }
+    .p1 { left: 3%; top: -10%; transform: rotate(-16deg); }
+    .p2 { left: 45%; top: -7%; transform: rotate(7deg);}
+    .p3 { left: 8%; top: 30%; transform: rotate(14deg); }
+    .p4 { left: 40%; top: 35%; transform: rotate(-10deg); }
 
 	.services-section { padding: var(--space-l) var(--space-m); }
     .service-item { flex-direction: column; gap: var(--space-s); }
